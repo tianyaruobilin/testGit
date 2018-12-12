@@ -1,0 +1,264 @@
+@CHARSET "UTF-8";
+
+* {
+	margin: 0px;
+	padding: 0px;
+	font-size: 20px;
+}
+
+img {
+	border: 0px;
+}
+
+body, html {
+	overflow: auto !important;
+	width: 100%;
+}
+.modal{ overflow: auto !important;}
+.body {
+	width: 100%;
+	height: 1000px;
+	background-image: url("../img/bodyBgimg.png");
+	color: blank;
+}
+
+.header {
+	width: 100%;
+	height: 200px;
+}
+
+a:link {
+	background-color: darkgrey;
+}
+
+a:active, a:visited {
+	background-color: darkgrey;
+	color: blank;
+}
+
+a:hover {
+	background-color: lightgrey;
+	color: green;
+}
+
+.header .shoucanglan {
+	width: 100%;
+	height: 40px;
+	background-color: white;
+}
+
+.header .shoucanglan a {
+	display: inline-block;
+	text-decoration: none;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background-color: snow;
+}
+
+.header .shoucanglan .navttopL {
+	width: 50%;
+	height: 100%;
+	margin-left: 20%;
+	float: left;
+}
+
+.header .shoucanglan .navttopL ul, li {
+	
+}
+
+.header .shoucanglan .navttopL ul li {
+	height: 100%;
+	margin: auto;
+	list-style: none;
+	display: inline;
+	line-height: 40px;
+}
+
+.header .shoucanglan .navttopR {
+	height: 100%;
+}
+
+.header .shoucanglan .navttopR table {
+	border: 0px;
+	height: 100%;
+	border-collapse: collapse;
+}
+
+.header .shoucanglan .navttopR table tr td {
+	
+}
+
+.header .LOGO {
+	width: 80%;
+	height: 150px;
+	margin: auto auto;
+}
+
+.header .LOGO1 {
+	width: 100px;
+	height: 100px;
+	float: left;
+}
+
+.header .LOGO2 {
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin-left: 50px;
+}
+
+.header .LOGO2 h3 {
+	font-size: 30px;
+	font-style: italic;
+	font-family: fantasy, cursive;
+	text-align: center;
+	line-height: 100px;
+}
+
+.header .LOGO .index {
+	position: absolute;
+	left: 60%;
+	top: 70px;
+	width: 300px;
+	height: 100px;
+}
+
+.header .LOGO .index .indexform {
+	height: 40px;
+	width: 300px;
+	float: left;
+	position: relative;
+	top: -46px;
+	display: inline;
+	left: 2px;
+}
+
+.header .LOGO .index table {
+	border: 0px;
+	height: 52px;
+	width: auto;
+	border-collapse: collapse; /*娑堥櫎琛ㄦ牸鐩搁偦杈�*/
+}
+
+.header .LOGO .index table tr .indexleft {
+	background: url(../img/indexleft.png) no-repeat;
+	height: 48px;
+	width: 3px;
+	background-size: 100% 100%;
+}
+
+.header .LOGO .index table tr .indexmain {
+	background: url(../img/indexmain.png);
+	height: 48px;
+	width: 255px;
+	background-size: 100% 100%;
+}
+
+.header .LOGO .index .indexright {
+	background: url(../img/indexright.png) no-repeat;
+	width: 43px;
+	height: 48px;
+	background-size: 100% 100%;
+}
+
+.header .LOGO .index .inputHOT1 {
+	width: 200px;
+	height: 40px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border: none;
+	outline: none;
+	opacity: 0.5;
+}
+
+.header .LOGO .index .inputHOT2 {
+	width: 80px;
+	height: 40px;
+	/* outline: none; */
+	opacity: 0;
+	cursor: pointer;
+}
+
+.header .LOGO .index .showHOT {
+	display: block;
+	position: absolute;
+	height: 20px;
+	top: -31px;
+}
+
+.header .navbg {
+	height: 50px;
+	width: 100%;
+	background-color: darkgrey;
+	position: absolute;
+	top: 150px;
+}
+
+.header .navbg nav {
+	width: 100%;
+}
+
+.header .navbg .nav {
+	height: 100%;
+	width: 80%;
+	margin: auto auto;
+	height: 50px;
+	display: block;
+}
+
+.header .navbg .nav .a {
+	display:block;
+	float:left;
+	width: 15%;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	text-decoration: none;
+	padding: auto 1%;
+	font-size: 20px;
+	font-style: normal;
+}
+
+.content {
+	width: 80%;
+	height: 700px;
+	margin-left: 10%;
+}
+
+.content .conleftnav {
+	width: 15%;
+	height: 700px;
+	backgroung-color: darkgrey;
+}
+
+.content .conleftnav nav a {
+	width: 100%;
+	height: 100px;
+	display: block;
+	text-decoration: none;
+	line-height: 100px;
+	text-align: center;
+}
+
+.content .iframemain {
+	width: 100%;
+	height: 700px;
+	position: relative;
+	margin:auto;
+}
+
+.footer {
+	height: 100px;
+	width: 100%;
+	background-color: darkgrey;
+}
+
+.footer p {
+	height: 100px;
+	width: 12%;
+	line-height: 25px;
+	color: black;
+	margin: auto 44%;
+	padding-top: 10px;
+}

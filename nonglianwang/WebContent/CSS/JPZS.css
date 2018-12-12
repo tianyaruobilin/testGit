@@ -1,0 +1,38 @@
+@CHARSET "UTF-8";
+
+body, html {
+	height: 700px;
+	width: 100%;
+	/* opacity: 0.5; */
+}
+
+* {
+	padding: 0px;
+	margin: 0px;
+	font-size: 18px;
+	color: black;
+}
+
+.showtable {
+	width: 90%;
+	height: 660px;
+	margin: 20px 5%;
+}
+
+.showtable table {
+	background-color: #c0c0c0;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.showtable table tr {
+	height: 66px; /* 方便设置翻页 ,确保了每页最多十条记录 */
+	width: 100%;
+}
+
+.showtable table tr td {
+	height: 66px;
+	width: auto;
+	line-height: 66px;
+	text-align: center;
+}

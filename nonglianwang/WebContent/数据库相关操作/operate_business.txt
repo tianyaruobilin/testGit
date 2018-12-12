@@ -1,0 +1,30 @@
+use NLW
+SELECT uno, BusinessManName, BusinessManIdCard,BusinessManTel,BusinessManAddr,BusinessManAddrSupplement
+FROM tb_businessman
+ORDER BY uno   OFFSET¡¡2 ROW  FETCH NEXT 2 ROW ONLY
+sp_help tb_businessman
+SELECT * FROM  (
+SELECT *, ROW_NUMBER() OVER(ORDER BY uno)  as R  FROM tb_businessman,
+) t  WHERE R>0 AND R<=2
+select *,getdate() from tb_user
+alter table tb_businessman add applytime datetime default getdate()
+alter table tb_businessman drop COLUMN applytime
+
+drop table tb_businessman
+select * from tb_businessman
+
+use NLW
+create table tb_businessman(
+	uno char(32) primary key,
+	BusinessManName nvarchar(20),
+	BusinessManIdCard char(18),
+	BusinessManTel char(11),
+	BusinessManAddr nvarchar(20),
+	BusinessManAddrSupplement nvarchar(50),
+	IsBusinessMan char(5) not null default 'false',
+	applytime datetime default getdate() null,
+	constraint fk_user_business foreign key(uno) references tb_user(uno)
+)
+select * from tb_businessman
+alter table tb_businessman add applytime datetime default getdate()
+alter table tb_businessman drop COLUMN applytime
