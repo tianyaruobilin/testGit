@@ -1,0 +1,28 @@
+use NLW
+create table tb_goods(
+goodsno int  identity(1,1) primary key,
+uno char(32) not null,
+goodsname nvarchar(10),
+goodscategory int,
+goodsimg varchar(150),
+goodsprice decimal(10,2),
+goodsdescript nvarchar(50),
+addtime datetime default getdate() not null,
+constraint fk_category_goods foreign key(goodscategory) references tb_goodscategory(cno),
+foreign key(uno) references tb_user(uno)
+)
+create table tb_goodscategory(
+cno int identity(1,1) primary key,
+categoryname nvarchar(3)
+)
+drop table tb_goodscategory
+drop table tb_goods
+select * from tb_goods
+select * from tb_goodscategory
+set identity_insert tb_goodscategory off
+insert into tb_goodscategory(categoryname) values('油脂')
+insert into tb_goodscategory(categoryname) values('渔产品')
+insert into tb_goodscategory(categoryname) values('蔬菜')
+insert into tb_goodscategory(categoryname) values('瓜果')
+insert into tb_goodscategory(categoryname) values('花贲')
+insert into tb_goodscategory(categoryname) values('其它')

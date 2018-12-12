@@ -1,0 +1,46 @@
+create database NLW
+use NLW
+drop table tb_user
+
+/*
+		this.uno = uno;
+		this.username = username;
+		this.password = password;
+		this.borntime = borntime;
+		this.e_mail = e_mail;
+		this.sex = sex;
+		this.activationCode = activationCode;
+		this.state = state;
+*/
+
+create table tb_user(
+	 uno char(32) primary key,/*IDENTITY(1,1),*/
+	 username varchar(20) not null,
+	 password varchar(20) not null,
+	 borntime date not null,
+	 e_mail varchar(30) not null,
+	 sex char(4) not null,
+	 activationCode char(32) not null,
+	 state varchar(5) not null default 'false',
+
+)
+
+insert into tb_user values('','','','','','','','')
+
+insert into tb_user(uno,username,password,borntime,e_mail,sex,activationCode,state) values('fasdfasf','fsldf','fadsf','1998-2-19','fadsf@Fdsf','nan','fadf','')
+
+set IDENTITY_INSERT tb_user ON
+insert into tb_user(uno,username,password,borntime,activationCode,e_mail,sex)  values(
+	'dfsdfdsgdg','lisi','13657097058','1998-02-19','hhhh','2681280434@qq.com','ÄÐ'
+)
+insert into tb_user(uno,username,password,borntime,activationCode,e_mail,sex)  values(
+	'dfsdfdsgdgdgsg','zhangsan','13657097058','1998-02-19','hhhh','2681280434@qq.com','ÄÐ'
+)
+insert into tb_user(uno,username,password,borntime,activationCode,e_mail,sex)  values(
+	'dfsdfdsgdfsafsagg','wangwu','13657097058','1998-02-19','hhhh','2681280434@qq.com','ÄÐ'
+)
+go
+set IDENTITY_INSERT tb_user  off
+
+select * from tb_user
+

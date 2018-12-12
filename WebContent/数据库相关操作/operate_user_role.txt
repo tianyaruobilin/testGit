@@ -1,0 +1,61 @@
+use NLW
+/*创建角色表*/
+create table tb_role(
+rno char(2) primary key,
+rname nvarchar(10)
+)
+/*创建用户角色关系表*/
+create table tb_user_role(
+uno char(32),
+rno char(2)  default '1',/*默认所有刚刚登陆的用户都是普通用户，没有优惠活动什么的*/
+constraint  fk_user_role foreign key(uno) references tb_user(uno),
+foreign key(rno) references tb_role(rno)
+)
+/*查询表结构*/
+sp_help tb_user
+sp_help tb_user_role
+sp_columns tb_user_role
+--向角色表中插入数据
+insert into tb_role values(
+'1','普通用户'
+)
+insert into tb_role values(
+'2','会员用户'
+)
+insert into tb_role values(
+'3','商家'
+)
+insert into tb_role values(
+'4','管理员'
+)
+--向用户角色表中添加用户名为:lirunmin 密码为:123得用户，并且赋予他所有角色
+insert into tb_user_role values(
+'024aec225baf4eaa93c68d581262ad8b','1'
+)
+insert into tb_user_role values(
+'024aec225baf4eaa93c68d581262ad8b','2'
+)
+insert into tb_user_role values(
+'024aec225baf4eaa93c68d581262ad8b','3'
+)
+insert into tb_user_role values(
+'024aec225baf4eaa93c68d581262ad8b','4'
+)
+
+--表查询
+select * from tb_role
+select * from tb_user
+select * from tb_user_role
+
+--表清空
+drop table tb_role
+drop table tb_user
+drop table tb_user_role
+--删除用户表中所有没有激活得账户
+delete from tb_user where state='false'
+
+
+/*保证这条记录不会被删除*/
+insert into tb_user values(
+	'024aec225baf4eaa93c68d581262ad8b','lirunmin','123','1998-02-19','13657097058@163.com','男','024aec225baf4eaa93c68d581262ad8b','true'
+)
